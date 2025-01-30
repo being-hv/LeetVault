@@ -7,13 +7,21 @@ LeetVault is a Next.js 15.1.6 project deployed on Vercel, designed to streamline
 🔥 Core Features
 
 ✅ Next.js 15.1.6 & React – Built with the latest Next.js framework for optimal performance.
+
 ✅ Code Challenge Management – Organize, track, and solve coding problems efficiently.
+
 ✅ API Routes – Custom API endpoints for dynamic data handling.
+
 ✅ User Authentication – Secure login and user sessions (OAuth, JWT, or Firebase integration).
+
 ✅ Dark Mode Support – Seamless light/dark mode for better accessibility.
+
 ✅ Optimized Fonts – Uses next/font for performance improvements.
+
 ✅ Hot Reloading – Instant updates while coding without refreshing the page.
+
 ✅ Vercel Deployment – Fast and scalable deployment with seamless CI/CD integration.
+
 
 🌐 Web3 & Ethereum Integration
 
