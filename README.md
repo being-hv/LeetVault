@@ -1,4 +1,4 @@
-LeetVault 🚀
+##LeetVault 🚀
 
 LeetVault is a Next.js 15.1.6 project deployed on Vercel, designed to streamline coding challenges, problem-solving, and efficient learning. It integrates Web3 and Ethereum, enabling blockchain-powered features alongside modern Web2 optimizations.
 
