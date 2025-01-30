@@ -1,8 +1,9 @@
-##LeetVault 🚀
+# LeetVault 
 
 LeetVault is a Next.js 15.1.6 project deployed on Vercel, designed to streamline coding challenges, problem-solving, and efficient learning. It integrates Web3 and Ethereum, enabling blockchain-powered features alongside modern Web2 optimizations.
 
 🌟 Features
+
 
 🔥 Core Features
 
@@ -26,31 +27,39 @@ LeetVault is a Next.js 15.1.6 project deployed on Vercel, designed to streamline
 🌐 Web3 & Ethereum Integration
 
 🚀 Ethereum Smart Contracts – LeetVault supports Ethereum-based smart contracts to verify and track coding achievements on-chain.
+
 🚀 Wallet Authentication – Users can log in using MetaMask, WalletConnect, or Coinbase Wallet for a decentralized experience.
+
 🚀 On-Chain Leaderboard – Store and verify coding scores on Ethereum (or L2 solutions like Arbitrum, Optimism, or Polygon) for transparency.
+
 🚀 NFT Rewards – Earn NFT badges for solving challenges, stored securely on the blockchain.
+
 🚀 Tokenized Incentives – Future plans for ERC-20 tokens as rewards for engagement and achievements.
+
 🚀 Decentralized Storage – Utilize IPFS or Arweave to store problem-solving histories securely.
+
 
 🚀 Getting Started
 
 To run the development server:
 
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev 
+or 
+yarn dev 
+or 
+pnpm dev 
+or 
+bun dev 
 
 Visit http://localhost:3000 in your browser to explore LeetVault.
 
 🛠 Development
-	•	Modify pages/index.tsx to update the main page.
+
+	•	Modify pages/index.tsx to update the main page. 
 	•	The app supports hot-reloading, reflecting changes instantly.
 
 API Routes
+
 	•	API routes are located in pages/api/ and mapped to /api/*.
 	•	Example: Access http://localhost:3000/api/hello to see a sample API response.
 	•	Modify pages/api/hello.ts to customize API logic.
@@ -58,6 +67,7 @@ API Routes
 📖 Learn More
 
 For further exploration, check out:
+
 	•	Next.js Documentation – Features, API details, and best practices.
 	•	Ethereum Developer Docs – Learn about Ethereum and smart contract development.
 	•	The Graph Protocol – Index and query blockchain data efficiently.
@@ -66,6 +76,7 @@ For further exploration, check out:
 🚀 Deployment
 
 LeetVault is deployed on Vercel for optimized performance. Deploy updates effortlessly using:
+
 	•	Vercel Platform
 
 For detailed deployment steps, refer to Next.js deployment documentation.
