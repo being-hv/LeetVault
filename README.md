@@ -1,10 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+LeetVault 🚀
 
-## Getting Started
+LeetVault is a Next.js 15.1.6 project deployed on Vercel, designed to streamline coding challenges, problem-solving, and efficient learning. It integrates Web3 and Ethereum, enabling blockchain-powered features alongside modern Web2 optimizations.
 
-First, run the development server:
+🌟 Features
 
-```bash
+🔥 Core Features
+
+✅ Next.js 15.1.6 & React – Built with the latest Next.js framework for optimal performance.
+✅ Code Challenge Management – Organize, track, and solve coding problems efficiently.
+✅ API Routes – Custom API endpoints for dynamic data handling.
+✅ User Authentication – Secure login and user sessions (OAuth, JWT, or Firebase integration).
+✅ Dark Mode Support – Seamless light/dark mode for better accessibility.
+✅ Optimized Fonts – Uses next/font for performance improvements.
+✅ Hot Reloading – Instant updates while coding without refreshing the page.
+✅ Vercel Deployment – Fast and scalable deployment with seamless CI/CD integration.
+
+🌐 Web3 & Ethereum Integration
+
+🚀 Ethereum Smart Contracts – LeetVault supports Ethereum-based smart contracts to verify and track coding achievements on-chain.
+🚀 Wallet Authentication – Users can log in using MetaMask, WalletConnect, or Coinbase Wallet for a decentralized experience.
+🚀 On-Chain Leaderboard – Store and verify coding scores on Ethereum (or L2 solutions like Arbitrum, Optimism, or Polygon) for transparency.
+🚀 NFT Rewards – Earn NFT badges for solving challenges, stored securely on the blockchain.
+🚀 Tokenized Incentives – Future plans for ERC-20 tokens as rewards for engagement and achievements.
+🚀 Decentralized Storage – Utilize IPFS or Arweave to store problem-solving histories securely.
+
+🚀 Getting Started
+
+To run the development server:
+
 npm run dev
 # or
 yarn dev
@@ -12,29 +35,31 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000 in your browser to explore LeetVault.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+🛠 Development
+	•	Modify pages/index.tsx to update the main page.
+	•	The app supports hot-reloading, reflecting changes instantly.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+API Routes
+	•	API routes are located in pages/api/ and mapped to /api/*.
+	•	Example: Access http://localhost:3000/api/hello to see a sample API response.
+	•	Modify pages/api/hello.ts to customize API logic.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+📖 Learn More
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For further exploration, check out:
+	•	Next.js Documentation – Features, API details, and best practices.
+	•	Ethereum Developer Docs – Learn about Ethereum and smart contract development.
+	•	The Graph Protocol – Index and query blockchain data efficiently.
+	•	NFT Development – Learn how to create and manage NFTs.
 
-## Learn More
+🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+LeetVault is deployed on Vercel for optimized performance. Deploy updates effortlessly using:
+	•	Vercel Platform
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+For detailed deployment steps, refer to Next.js deployment documentation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Join the next-gen coding revolution with LeetVault! 🌐🔥🚀
