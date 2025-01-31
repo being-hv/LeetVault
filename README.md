@@ -44,12 +44,6 @@ LeetVault is a Next.js 15.1.6 project deployed on Vercel, designed to streamline
 To run the development server:
 
 npm install then npm run dev 
-or 
-yarn dev 
-or 
-pnpm dev 
-or 
-bun dev 
 
 Visit http://localhost:3000 in your browser to explore LeetVault.
 
