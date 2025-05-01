@@ -40,10 +40,13 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 			const { problemDoc, userDoc, problemRef, userRef } = await returnUserDataAndProblemData(transaction);
 
 			if (userDoc.exists() && problemDoc.exists()) {
+				const likedProblems = Array.isArray(userDoc.data().likedProblems) ? userDoc.data().likedProblems : [];
+				const dislikedProblems = Array.isArray(userDoc.data().dislikedProblems) ? userDoc.data().dislikedProblems : [];
+
 				if (liked) {
 					// remove problem id from likedProblems on user document, decrement likes on problem document
 					transaction.update(userRef, {
-						likedProblems: userDoc.data().likedProblems.filter((id: string) => id !== problem.id),
+						likedProblems: likedProblems.filter((id: string) => id !== problem.id),
 					});
 					transaction.update(problemRef, {
 						likes: problemDoc.data().likes - 1,
@@ -53,8 +56,8 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 					setData((prev) => ({ ...prev, liked: false }));
 				} else if (disliked) {
 					transaction.update(userRef, {
-						likedProblems: [...userDoc.data().likedProblems, problem.id],
-						dislikedProblems: userDoc.data().dislikedProblems.filter((id: string) => id !== problem.id),
+						likedProblems: [...likedProblems, problem.id],
+						dislikedProblems: dislikedProblems.filter((id: string) => id !== problem.id),
 					});
 					transaction.update(problemRef, {
 						likes: problemDoc.data().likes + 1,
@@ -67,7 +70,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 					setData((prev) => ({ ...prev, liked: true, disliked: false }));
 				} else {
 					transaction.update(userRef, {
-						likedProblems: [...userDoc.data().likedProblems, problem.id],
+						likedProblems: [...likedProblems, problem.id],
 					});
 					transaction.update(problemRef, {
 						likes: problemDoc.data().likes + 1,
@@ -90,10 +93,14 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 		await runTransaction(firestore, async (transaction) => {
 			const { problemDoc, userDoc, problemRef, userRef } = await returnUserDataAndProblemData(transaction);
 			if (userDoc.exists() && problemDoc.exists()) {
+				// Ensure dislikedProblems and likedProblems are arrays
+				const dislikedProblems = Array.isArray(userDoc.data().dislikedProblems) ? userDoc.data().dislikedProblems : [];
+				const likedProblems = Array.isArray(userDoc.data().likedProblems) ? userDoc.data().likedProblems : [];
+
 				// already disliked, already liked, not disliked or liked
 				if (disliked) {
 					transaction.update(userRef, {
-						dislikedProblems: userDoc.data().dislikedProblems.filter((id: string) => id !== problem.id),
+						dislikedProblems: dislikedProblems.filter((id: string) => id !== problem.id),
 					});
 					transaction.update(problemRef, {
 						dislikes: problemDoc.data().dislikes - 1,
@@ -102,8 +109,8 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 					setData((prev) => ({ ...prev, disliked: false }));
 				} else if (liked) {
 					transaction.update(userRef, {
-						dislikedProblems: [...userDoc.data().dislikedProblems, problem.id],
-						likedProblems: userDoc.data().likedProblems.filter((id: string) => id !== problem.id),
+						dislikedProblems: [...dislikedProblems, problem.id],
+						likedProblems: likedProblems.filter((id: string) => id !== problem.id),
 					});
 					transaction.update(problemRef, {
 						dislikes: problemDoc.data().dislikes + 1,
@@ -115,7 +122,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 					setData((prev) => ({ ...prev, disliked: true, liked: false }));
 				} else {
 					transaction.update(userRef, {
-						dislikedProblems: [...userDoc.data().dislikedProblems, problem.id],
+						dislikedProblems: [...dislikedProblems, problem.id],
 					});
 					transaction.update(problemRef, {
 						dislikes: problemDoc.data().dislikes + 1,
@@ -306,7 +313,12 @@ function useGetUsersDataOnProblem(problemId: string) {
 			const userSnap = await getDoc(userRef);
 			if (userSnap.exists()) {
 				const data = userSnap.data();
-				const { solvedProblems, likedProblems, dislikedProblems, starredProblems } = data;
+				const {
+					solvedProblems = [],
+					likedProblems = [],
+					dislikedProblems = [],
+					starredProblems = [],
+				} = data;
 				setData({
 					liked: likedProblems.includes(problemId), // likedProblems["two-sum","jump-game"]
 					disliked: dislikedProblems.includes(problemId),
